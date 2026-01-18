@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Code Exporter</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 12px;
+      width: 300px;
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    label {
+      font-size: 13px;
+      display: block;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #30363d;
+      background: #161b22;
+      color: #c9d1d9;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 8px;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    #scan {
+      background: #238636;
+      color: #fff;
+    }
+
+    #zip {
+      background: #1f6feb;
+      color: #fff;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      text-align: center;
+      min-height: 16px;
+      color: #8b949e;
+    }
+
+    footer {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 11px;
+      color: #6e7681;
+    }
+  </style>
+</head>
+<body>
+
+<h3>🔹 AI Code Exporter</h3>
+
+<label for="limit">Últimos códigos para download</label>
+<input type="number" id="limit" min="1" max="50" value="5">
+
+<button id="scan">📥 Capturar códigos</button>
+<button id="zip">🗜️ Baixar ZIP</button>
+
+<div id="status"></div>
+
+<footer>
+  Extração passiva • Seguro
+</footer>
+
+<script src="jszip.min.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
